@@ -23,6 +23,11 @@ function App() {
   const [pokemon, setPokemon] = useState([]);
   const [offset, setOffset] = useState(0);
 
+  function pageCounter () {
+
+
+  }
+
   // reach out to some API
   // get some data
   // make sure the data is what we want
@@ -64,10 +69,13 @@ function App() {
   // iterate through each one and render
   return (
     <div className="pokemon-app">
+      <div className='load-pages'>
       <button 
         className="pokemon-app__load-more"
         onClick={loadMorePokemon}
-      > Load more Pokemon</button>
+      > </button>
+      <p> Page: {offset/10}</p>
+      </div>
       <div className="promo-card-container">
         {pokemon.map((singlePokemon, index) => { // index  = 0, 1, 2, 3, 4, 5
           // if(index % 3 === 0) setBlackBackground = !setBlackBackground;
